@@ -50,6 +50,7 @@ namespace Assignment_4
         //live life async method - passing in the same random variable created in the main form - 
         public async Task liveLifeAsync(Random r)
         {
+            //await lambda function - running the main live life method
             await Task.Run(() =>
             {
                 //setting the eventOccurance to milliseconds format
