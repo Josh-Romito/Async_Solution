@@ -55,8 +55,6 @@ namespace Assignment_4
         {
             await Task.Run (() =>
             {
-                Stopwatch timer = new Stopwatch();
-                timer.Start();
                 while (true)
                 {
                     if (peasantOutput1.Items.Contains("Dead"))
