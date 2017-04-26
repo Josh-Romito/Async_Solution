@@ -27,7 +27,7 @@ namespace Assignment_4
         public ListBox peasantOutput { get { return _peasantOutput; } set { _peasantOutput = value; } }
         public string name { get { return _name; } set { _name = value; } }
 
-        //Method to grab the current elapsed time of the peds life
+        //Method to grab the current elapsed time of the peasants life
         public int UpTime()
         {
             return (int)_lifetime.Elapsed.TotalMilliseconds;
@@ -50,7 +50,7 @@ namespace Assignment_4
         //live life async method - passing in the same random variable created in the main form - 
         public async Task liveLifeAsync(Random r)
         {
-            //await lambda function - running the main live life method
+            //await task lambda - running the main live life method
             await Task.Run(() =>
             {
                 //setting the eventOccurance to milliseconds format
@@ -97,9 +97,10 @@ namespace Assignment_4
         }
     }
 
-    //static class to hold all the things...
+    //static class of things to do...
     public static class ThingsToDo
     {
+        //static array to hold all the stuff
         public static string[] stuff = new string[10] 
         {
             "working...", "protecting the farm...", "running scared...!?",

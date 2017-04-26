@@ -40,7 +40,7 @@ namespace Assignment_4
            
             //creating peasants - passing in a listbox, a name, and the random number object
             Peasant derp = new Peasant(peasantOutput2, "Gary", r);
-            Peasant derp2 = new Peasant(peasantOutput1, "Bob", r);
+            Peasant derp2 = new Peasant(peasantOutput1, "Fred", r);
 
             //calling the liveLifeAsync methods
             await Task.Run (() => { Task x = derp.liveLifeAsync(r); });
