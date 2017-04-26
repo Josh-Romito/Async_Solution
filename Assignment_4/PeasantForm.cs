@@ -44,21 +44,11 @@ namespace Assignment_4
             Peasant derp2 = new Peasant(peasantOutput1, "Fred", r);
 
             //calling the liveLifeAsync methods
-            //await Task.Run (() => { Task x = derp.liveLifeAsync(r); });
-            //await Task.Run (() => { Task x = derp2.liveLifeAsync(r); });
+            await Task.Run (() => { Task x = derp.liveLifeAsync(r); });
+            await Task.Run (() => { Task x = derp2.liveLifeAsync(r); });
             
-
-            // NEW EASY WAY OF WAITING - makes the statusAync function redundant
-            Task first = derp.liveLifeAsync(r);
-            Task second = derp2.liveLifeAsync(r);
-
-            await Task.WhenAll(first, second);
-            btnStart.Enabled = true;
-            label1.Text = "Simulation Finished...";
-            btnStart.Text = "Start simulation";
-
             //calling the statusAsync method
-            //await Task.Run(() => { Task x = statusAsync(); });
+            await Task.Run(() => { Task x = statusAsync(); });
         }
 
         //quite ridiculous... but it works - clears the list boxes, and handles label/button changes
